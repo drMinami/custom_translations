@@ -28,8 +28,8 @@ CustomTranslations.blacklist_keys += [ :devise, :simple_form ]
 
 # config/application.rb
 config.i18n.load_path += Dir[
-  "#{config.root}/config/locales/**/*.yml",
-  CustomTranslations.path
+  Rails.root.join('/config/locales/**/*.yml'),
+  Rails.root.join('/config/locales/custom_translations.yml')
 ]
 ```
 
