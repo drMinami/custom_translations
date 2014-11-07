@@ -26,8 +26,11 @@ Initializer:
 CustomTranslations.path = Rails.root.join('config/locale/custom_translations.yml')
 CustomTranslations.blacklist_keys += [ :devise, :simple_form ]
 
-# Add this to your application.rb
-config.i18n.load_path += Dir["#{config.root}/config/locales/**/*.yml", CustomTranslations.path]
+# config/application.rb
+config.i18n.load_path += Dir[
+  "#{config.root}/config/locales/**/*.yml",
+  CustomTranslations.path
+]
 ```
 
 Example usage:
@@ -38,14 +41,6 @@ translations = CustomTranslations.export
 # Read from JSON.
 CustomTranslations.import(JSON.parse(params[:translations]))
 ```
-
-## Contributing
-
-1. Fork it ( https://github.com/[my-github-username]/custom_translations/fork )
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create a new Pull Request
 
 ## License
 
