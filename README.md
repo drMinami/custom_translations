@@ -1,4 +1,4 @@
-# CustomTranslations
+# CustomTranslations [![Build Status](https://travis-ci.org/drMinami/custom_translations.svg?branch=master)](https://travis-ci.org/drMinami/custom_translations)
 
 I18n locales overriding via single file.
 
